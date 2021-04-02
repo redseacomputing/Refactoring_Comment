@@ -1,6 +1,5 @@
 package comment;
 
-import comment.Account;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -32,9 +31,7 @@ class AccountTest {
     @Test
     void debitGreaterThan1000ShouldThrowAnIllegalArgumentException() {
         Account account = new Account();
-        assertThrows(IllegalArgumentException.class, () -> {
-            account.debit(1001);
-        });
+        assertThrows(IllegalArgumentException.class, () -> account.debit(1001));
     }
 
     @Test

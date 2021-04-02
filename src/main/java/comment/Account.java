@@ -7,7 +7,7 @@ import java.util.List;
 public class Account {
 
     private float balance = 0;
-    private List<Transaction> transactions = new ArrayList<>();
+    private final List<Transaction> transactions = new ArrayList<>();
     private String lastDebitDate;
 
     public void credit(float amount) {
@@ -38,7 +38,7 @@ public class Account {
     }
 
     public Transaction getLastTransaction() {
-        return (Transaction) transactions.get(transactions.size() - 1);
+        return transactions.get(transactions.size() - 1);
     }
 
     public String getLastDebitDate() {
