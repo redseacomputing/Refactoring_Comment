@@ -1,8 +1,8 @@
 package comment;
 
 class Transaction {
-    private float amount;
-    private boolean recorded;
+    private final float amount;
+    private final boolean recorded;
 
     public Transaction(boolean recorded, float amount) {
         this.amount = amount;
