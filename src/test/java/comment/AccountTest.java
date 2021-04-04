@@ -15,14 +15,13 @@ class AccountTest {
     }
 
     @Test
-    void debit100ShouldMakeAnSaldoOf100() {
+    void debit100ShouldMakeASaldoOf100() {
         account.debit(100);
         assertEquals(-100d, account.getBalance(), 0.01);
     }
 
     @Test
     void debit100AndCredit100ShouldReturnZero() {
-        Account account = new Account();
         account.debit(100);
         account.credit(100);
         assertEquals(0, account.getBalance(), 0.01);
